@@ -1,0 +1,18 @@
+{
+  "name": "matrice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/main.scss css/style.css --watch",
+    "server": "live-server --port=5510",
+    "purge": "purgecss --css ./css/style.css --content ./index.html ./js/bootstrap.bundle.js ./index.js --output ./css/style.min.css -font -keyframes"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "sass": "^1.52.1"
+  }
+}

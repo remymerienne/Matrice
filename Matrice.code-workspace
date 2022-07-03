@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "name": "Matrice",
+      "path": "./"
+    }
+  ],
+  "settings": {
+    "window.zoomLevel": 0,
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.multiRootWorkspaceName": "Matrice"
+    // "restoreTerminals.terminals": [
+    //   {
+    //     "splitTerminals": [
+    //       {
+    //         "name": "Sass",
+    //         "commands": ["npm run sass"]
+    //       }
+    //     ]
+    //   },
+    // {
+    //   "splitTerminals": [
+    //     {
+    //       "name": "Server",
+    //       "commands": ["npm run server"]
+    //     }
+    //   ]
+    // },
+    //   {
+    //     "splitTerminals": [
+    //       {
+    //         "name": "Git"
+    //       }
+    //     ]
+    //   }
+    // ]
+  }
+}
