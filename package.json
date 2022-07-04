@@ -4,15 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
     "sass": "sass sass/main.scss css/style.css --watch",
-    "server": "live-server --port=5510",
-    "purge": "purgecss --css ./css/style.css --content ./index.html ./js/bootstrap.bundle.js ./index.js --output ./css/style.min.css -font -keyframes"
+    "purge": "purgecss --css ./css/style.css --content ./index.html ./dist/index.bundle.js ./js/bootstrap/bootstrap.bundle.js --output ./dist/style.min.css -font -keyframes",
+    "server": "live-server --port=5510 --open=\"./index.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remymerienne/Matrice.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rémy Merienne",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remymerienne/Matrice/issues"
+  },
+  "homepage": "https://github.com/remymerienne/Matrice#readme",
   "devDependencies": {
-    "eslint": "^8.16.0",
-    "sass": "^1.52.1"
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-arrow-functions": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "eslint": "^8.13.0",
+    "sass": "^1.49.9",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }
