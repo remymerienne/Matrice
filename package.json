@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "sass": "sass sass/main.scss css/style.css --watch",
-    "purge": "purgecss --css ./css/style.css --content ./index.html ./dist/index.bundle.js ./js/bootstrap/bootstrap.bundle.js --output ./dist/style.min.css -font -keyframes",
+    "sass": "sass ./sass/main.scss ./dist/css/style.css --watch",
+    "purge": "purgecss --css ./dist/css/style.css --content ./index.html ./dist/js/index.bundle.js ./dist/js/bootstrap.bundle.min.js --output ./dist/css/style.min.css -font -keyframes",
     "server": "live-server --port=5510 --open=\"./index.html\""
   },
   "repository": {
