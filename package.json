@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
     "sass": "sass ./sass/main.scss ./dist/css/style.css --watch",
-    "purge": "purgecss --css ./dist/css/style.css --content ./index.html ./dist/js/index.bundle.js ./dist/js/bootstrap.bundle.min.js --output ./dist/css/style.min.css -font -keyframes",
-    "server": "live-server --port=5510 --open=\"./index.html\""
+    "build": "webpack --config webpack.config.js",
+    "purge": "purgecss --css ./dist/css/style.css --content ./index.html --output ./dist/css/style.purge.css -font -keyframes",
+    "prefix": "postcss ./dist/css/style.purge.css --use autoprefixer -d ./dist/css/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   "keywords": [],
   "author": "Rémy Merienne",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/remymerienne/Matrice/issues"
   },
