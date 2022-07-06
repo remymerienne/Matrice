@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass ./sass/main.scss ./dist/css/style.css --watch",
+    "sass": "sass ./sass/main.scss ./dist/css/style.css --watch --style compressed",
     "build": "webpack --config webpack.config.js",
-    "purge": "purgecss --css ./dist/css/style.css --content ./index.html --output ./dist/css/style.purge.css -font -keyframes",
-    "prefix": "postcss ./dist/css/style.purge.css --use autoprefixer -d ./dist/css/style.min.css"
+    "purge": "purgecss --css ./dist/css/style.css --content ./index.html ./dist/js/bootstrap.bundle.min.js ./dist/js/index.bundle.min.js --output ./dist/css/ -font -keyframes",
+    "prefix": "postcss ./dist/css/style.css --use autoprefixer -d ./dist/css/"
   },
   "repository": {
     "type": "git",
