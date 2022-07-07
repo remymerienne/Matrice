@@ -3,12 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "sass": "sass ./sass/main.scss ./dist/css/style.css --watch --style compressed",
-    "build": "webpack --config webpack.config.js",
-    "purge": "purgecss --css ./dist/css/style.css --content ./index.html ./dist/js/bootstrap.bundle.min.js ./dist/js/index.bundle.min.js --output ./dist/css/ -font -keyframes",
-    "prefix": "postcss ./dist/css/style.css --use autoprefixer -d ./dist/css/"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/remymerienne/Matrice.git"
@@ -21,14 +16,5 @@
     "url": "https://github.com/remymerienne/Matrice/issues"
   },
   "homepage": "https://github.com/remymerienne/Matrice#readme",
-  "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/plugin-transform-arrow-functions": "^7.16.7",
-    "@babel/preset-env": "^7.16.11",
-    "babel-loader": "^8.2.4",
-    "eslint": "^8.13.0",
-    "sass": "^1.49.9",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
-  }
+  "devDependencies": {}
 }
