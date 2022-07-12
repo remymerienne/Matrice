@@ -1,2 +1,30 @@
+NOTES
+=====
+
+Live Server npm :
+-----------------
 https://www.npmjs.com/package/live-server
 
+*******************************************************************************
+
+Git Flow :
+----------
+Main : Branche de distribution
+Develop : Branche de développement
+Feature : Développement de fonctionnalité
+Hotfix : Correction de bug critique
+Release : Préparation de version
+Support : Maintenance de version passée
+
+Extra :
+-------
+Chore : Autres tâches
+Experiment : Test de fonctionnalité ou autre...
+
+*******************************************************************************
+
+CSS :
+-----
+- Short hand (image non utilisée)
+
+*******************************************************************************
