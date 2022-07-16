@@ -2,29 +2,28 @@
   - [1.1. Liste des commandes de base](#11-liste-des-commandes-de-base)
   - [1.2. Options de package.json](#12-options-de-packagejson)
   - [1.3. Dépendances de développement](#13-dépendances-de-développement)
-    - [1.3.1. Liste des dépendances :](#131-liste-des-dépendances-)
-    - [1.3.2. Scipts](#132-scipts)
-- [2. Git](#2-git)
-  - [2.1. Installation](#21-installation)
-  - [2.2. Vérification de version](#22-vérification-de-version)
-  - [2.3. Configuration](#23-configuration)
-    - [2.3.1. Error message](#231-error-message)
-  - [2.4. Initialisation](#24-initialisation)
-  - [2.5. Les commits](#25-les-commits)
-    - [2.5.1. Rédaction des commits](#251-rédaction-des-commits)
-      - [2.5.1.1. Les types](#2511-les-types)
-      - [2.5.1.2. Modèle de commit](#2512-modèle-de-commit)
-  - [2.6. Les branches](#26-les-branches)
-  - [2.7. Les remotes](#27-les-remotes)
-  - [2.8. Fetch](#28-fetch)
-  - [2.9. Les tags](#29-les-tags)
-  - [2.10. Gitignore](#210-gitignore)
-  - [2.11. Diff](#211-diff)
-- [3. Badges Markdown](#3-badges-markdown)
-  - [3.1. Grandes tailles](#31-grandes-tailles)
-  - [3.2. Badges normaux](#32-badges-normaux)
-  - [3.3. Markdown Emoji Markup](#33-markdown-emoji-markup)
-- [4. Hiérarchie des commentaires](#4-hiérarchie-des-commentaires)
+  - [1.4. Scripts](#14-scripts)
+- [1. Git](#1-git)
+  - [1.1. Installation](#11-installation)
+  - [1.2. Vérification de version](#12-vérification-de-version)
+  - [1.3. Configuration](#13-configuration)
+    - [1.3.1. Error message](#131-error-message)
+  - [1.4. Initialisation](#14-initialisation)
+  - [1.5. Les commits](#15-les-commits)
+    - [1.5.1. Rédaction des commits](#151-rédaction-des-commits)
+      - [1.5.1.1. Les types](#1511-les-types)
+      - [1.5.1.2. Modèle de commit](#1512-modèle-de-commit)
+  - [1.6. Les branches](#16-les-branches)
+  - [1.7. Les remotes](#17-les-remotes)
+  - [1.8. Fetch](#18-fetch)
+  - [1.9. Les tags](#19-les-tags)
+  - [1.10. Gitignore](#110-gitignore)
+  - [1.11. Diff](#111-diff)
+- [2. Badges Markdown](#2-badges-markdown)
+  - [2.1. Grandes tailles](#21-grandes-tailles)
+  - [2.2. Badges normaux](#22-badges-normaux)
+  - [2.3. Markdown Emoji Markup](#23-markdown-emoji-markup)
+- [3. Hiérarchie des commentaires](#3-hiérarchie-des-commentaires)
 
 ---
 
@@ -41,8 +40,6 @@
 [https://docs.npmjs.com/cli/v8/configuring-npm/package-json](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
 
 ## 1.3. Dépendances de développement
-
-### 1.3.1. Liste des dépendances :
 
 - Webpack :
 
@@ -92,10 +89,16 @@
   "jest": "latest",
   "@types/jest": "latest",
   "@babel/plugin-transform-arrow-functions": "latest",
-  "@babel/preset-env": "latest"
+  "@babel/preset-env": "latest",
   ```
 
-### 1.3.2. Scipts
+- Jsdoc :
+
+  ```json
+  "jsdoc": "latest",
+  ```
+
+## 1.4. Scripts
 
 ```json
 "sass": "sass ./sass/main.scss ./dist/css/style.css --watch --style compressed",
@@ -105,25 +108,26 @@
 "test": "jest --watch --colors --verbose",
 "test-cov": "jest --coverage",
 "server-src": "live-server --port=8080 --open=\"src/index.html\"",
+"doc": "jsdoc -c ./jsdoc.conf.json",
 ```
 
 ---
 
-# 2. Git
+# 1. Git
 
 ![https://a11ybadges.com/badge?logo=git](https://a11ybadges.com/badge?logo=git)
 
 [Site officiel](http://git-scm.com)
 
-## 2.1. Installation
+## 1.1. Installation
 
 `$ brew install git`
 
-## 2.2. Vérification de version
+## 1.2. Vérification de version
 
 `$ git --version`
 
-## 2.3. Configuration
+## 1.3. Configuration
 
 Pour un apperçu de la configuration actuelle :
 
@@ -155,7 +159,7 @@ Définir _main_ comme nom de branche par défaut :
 
 `git config --global init.defaultBranch main`
 
-### 2.3.1. Error message
+### 1.3.1. Error message
 
 Il peut parfois arriver qu’un message d’erreur apparaisse lors d’un commit ou d’un merge de type :
 
@@ -168,7 +172,7 @@ Taper ‘code’ dans l’invite et sélectionner la commande :
 
 `Shell Command: Install 'code' command in PATH`
 
-## 2.4. Initialisation
+## 1.4. Initialisation
 
 Nouveau projet :
 
@@ -178,7 +182,7 @@ Cloner un projet existant :
 
 `$ git clone <https://mon-repo-distant>`
 
-## 2.5. Les commits
+## 1.5. Les commits
 
 Inclures tous les fichiers modifiés au prochain commit :
 
@@ -198,9 +202,9 @@ Annuler le dernier commit :
 
 notes : Va créer un nouveau commit “d’annulation” ce qui ne posera pas de problème lors d’un prochain push vers un dépot distant.
 
-### 2.5.1. Rédaction des commits
+### 1.5.1. Rédaction des commits
 
-#### 2.5.1.1. Les types
+#### 1.5.1.1. Les types
 
 - feat : Ajout d’ue nouvelle fonctionnalité
 - fix : Correction d’un bug
@@ -213,7 +217,7 @@ notes : Va créer un nouveau commit “d’annulation” ce qui ne posera pas de
 - revert : Annulation d’un précédent commit
 - chore : toute autre modification
 
-#### 2.5.1.2. Modèle de commit
+#### 1.5.1.2. Modèle de commit
 
 ```bash
 [FIX] index (#9): change alt text images
@@ -223,7 +227,7 @@ Alt text images must be different than images name in "Activity"
 section.Closes #9
 ```
 
-## 2.6. Les branches
+## 1.6. Les branches
 
 Lister les branches locales :
 
@@ -277,7 +281,7 @@ Merger une branche en conservant l’historique :
 
 `$ git merge --no-ff <branche-à-merger>`
 
-## 2.7. Les remotes
+## 1.7. Les remotes
 
 Lister les remotes :
 
@@ -291,7 +295,7 @@ Mettre à jour le HEAD aprés changement de branche par défaut :
 
 `$ git remote set-head origin -a`
 
-## 2.8. Fetch
+## 1.8. Fetch
 
 Mise à jour des changements entre dépot local et distant :
 
@@ -301,7 +305,7 @@ Suppression des branches supprimées et réstées en mémoire localement :
 
 `$ git fetch --prune`
 
-## 2.9. Les tags
+## 1.9. Les tags
 
 Repertorier les tags :
 
@@ -323,7 +327,7 @@ Envoyer le tag sur un dépot distant :
 
 `$ git push origin <tagname>`
 
-## 2.10. Gitignore
+## 1.10. Gitignore
 
 Pour désindexer des fichiers ajoutés au .gitignore :
 
@@ -333,7 +337,7 @@ Pour désindexer des fichiers ajoutés au .gitignore :
 
 `$ git commit -m "fixed untracked files`
 
-## 2.11. Diff
+## 1.11. Diff
 
 `$ git diff main..develop`
 
@@ -341,15 +345,15 @@ Indique les différence entre la brache Main et la branche Develop.
 
 ---
 
-# 3. Badges Markdown
+# 2. Badges Markdown
 
 ![https://a11ybadges.com/badge?logo=markdown](https://a11ybadges.com/badge?logo=markdown)
 
-## 3.1. Grandes tailles
+## 2.1. Grandes tailles
 
 [GitHub - a11y-badges/a11y-markdown-badges: accessible markdown badges for profile and project READMEs (and everything else!) via a11y badges](https://github.com/a11y-badges/a11y-markdown-badges)
 
-## 3.2. Badges normaux
+## 2.2. Badges normaux
 
 [GitHub - Ileriayo/markdown-badges: Badges for your personal developer branding, profile, and projects.](https://github.com/Ileriayo/markdown-badges)
 
@@ -357,13 +361,13 @@ Indique les différence entre la brache Main et la branche Develop.
 
 [150+ Badges for GitHub](https://dev.to/envoy_/150-badges-for-github-pnk)
 
-## 3.3. Markdown Emoji Markup
+## 2.3. Markdown Emoji Markup
 
 [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 
 ---
 
-# 4. Hiérarchie des commentaires
+# 3. Hiérarchie des commentaires
 
 ```html
 <!--  !   Red     - End -->
